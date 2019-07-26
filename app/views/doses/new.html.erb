@@ -1,8 +1,8 @@
 <h1>Doses#new</h1>
-<p>Find me in app/views/doses/new.html.erb</p>
+<p>http://localhost:3000/cocktails/1/doses/new</p>
 
 <%= simple_form_for [@cocktail, @dose] do |f| %>
   <%= f.input :description %>
   <%= f.association :ingredient, collection: Ingredient.all %>
-  <%= f.submit %>
+  <%= f.submit "add dose"%>
 <% end %>

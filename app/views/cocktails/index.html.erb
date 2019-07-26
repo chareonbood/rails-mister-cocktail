@@ -1,8 +1,13 @@
-<h1>Cocktails#inde</h1>
+<h1>Cocktails</h1>
 
 <div>
   <% @cocktails.each do |cocktail| %>
-  <%= cocktail.name %>
+  <%= link_to cocktail.name, cocktail_path(cocktail)%>
   <br>
   <% end %>
+</div>
+
+
+<div style="margin-top: 30px">
+  <button><%= link_to "add new cocktail", new_cocktail_path %></button>
 </div>
