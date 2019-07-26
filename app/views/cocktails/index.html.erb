@@ -1,27 +1,85 @@
-<!-- <div class="banner">
-  <div>
-    <h1>Cocktails</h1>
+
+<!-- NAVBAR -->
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon fixed-top">
+  <a class="navbar-brand" href="#">
+    <img src="" />
+</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Contact</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">MyWhiskey</a>
+      </li>
+      <li class="nav-item dropdown">
+        <img class="avatar dropdown-toggle" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" src="" />
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+        </div>
+      </li>
+    </ul>
   </div>
-</div> -->
+</div>
 
 
+<!-- BANNER -->
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80;">
   <div class="container">
-    <h1>Whiskey library</h1>
-    <p>Show your friends your collection</p>
-    <%= link_to "Add new Whiskey", new_cocktail_path, class: "btn btn-primary" %>
+    <h1>Whiskey Moments</h1>
+    <p>Share your passion with your friends</p>
+    <%= link_to "Add Moment", new_cocktail_path, class: "btn btn-primary" %>
   </div>
 </div>
 
-
+<!-- CONTENT -->
 
 <div class="container">
-  <div class="cocktail-index">
-    <% @cocktails.each do |cocktail| %>
-    <%= link_to cocktail.name, cocktail_path(cocktail)%>
-    <br>
-    <% end %>
+    <div class="index-cards">
+      <% @cocktails.each do |cocktail| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg')">
+      <%= link_to cocktail.name, cocktail_path(cocktail)%>
+      </div>
+      <% end %>
+    </div>
+</div>
+
+
+
+<!--
+
+<div class="container">
+    <div class="index-cards">
+      <% @cocktails.each do |cocktail| %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%= link_to cocktail.name, cocktail_path(cocktail)%>
+      </div>
+      <% end %>
+    </div>
+</div> -->
+
+<!-- FOORTER -->
+
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This footer is made with <i class="fas fa-heart"></i> at Le Wagon
   </div>
 </div>
+
+
 
 
