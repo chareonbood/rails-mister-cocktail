@@ -1,13 +1,27 @@
-<h1>Cocktails</h1>
+<!-- <div class="banner">
+  <div>
+    <h1>Cocktails</h1>
+  </div>
+</div> -->
 
-<div>
-  <% @cocktails.each do |cocktail| %>
-  <%= link_to cocktail.name, cocktail_path(cocktail)%>
-  <br>
-  <% end %>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80;">
+  <div class="container">
+    <h1>Whiskey library</h1>
+    <p>Show your friends your collection</p>
+    <%= link_to "Add new Whiskey", new_cocktail_path, class: "btn btn-primary" %>
+  </div>
 </div>
 
 
-<div style="margin-top: 30px">
-  <button><%= link_to "add new cocktail", new_cocktail_path %></button>
+
+<div class="container">
+  <div class="cocktail-index">
+    <% @cocktails.each do |cocktail| %>
+    <%= link_to cocktail.name, cocktail_path(cocktail)%>
+    <br>
+    <% end %>
+  </div>
 </div>
+
+
